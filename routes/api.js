@@ -27,6 +27,13 @@ async function sleep(ms) {
 }
 
 loghandler = {
+    notparam: {
+        status: false,
+        creator: `${creator}`,
+        code: 406,
+        message: 'masukan parameter apikey'
+    },
+loghandler = {
     noturl: {
         status: false,
         creator: `${creator}`,
@@ -496,7 +503,9 @@ res.json({
 	       }
       })
      router.get('/mediafire', async(req, res) => {
-	     let url = req.query.url
+	     let url = req.query.url,
+	     let apikey = req.query.apikey
+	     if(!apikey) return res.json(loghandler.notparam)
 	     if (!url) return res.json(loghandler.noturl)
 	     let result = await mediafireDl(url)
 	     try {
