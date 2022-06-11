@@ -6,7 +6,7 @@ let zahirr = db.get("zahirr");
 } catch (e) {
 	console.log('')  
 }
-let creator = "xfar"
+let creator = "Hafidz Abdillah"
 let axios = require('axios')
 let fs = require('fs')
 let fetch = require('node-fetch');
@@ -38,6 +38,12 @@ loghandler = {
         creator: `${creator}`,
         code: 406,
         message: 'Masukkan query'
+    },
+    notapikey: {
+        status: false,
+        creator: `${creator}`,
+        code: 406,
+        message: 'Apikey invalid'
     },
     error: {
         status: 404,
