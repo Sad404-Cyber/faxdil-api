@@ -26,13 +26,7 @@ async function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-loghandler = {
-    notparam: {
-        status: false,
-        creator: `${creator}`,
-        code: 406,
-        message: 'masukan parameter apikey'
-    },
+
 loghandler = {
     noturl: {
         status: false,
