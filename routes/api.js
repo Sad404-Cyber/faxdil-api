@@ -54,6 +54,21 @@ loghandler = {
 
 const listkey = ["apit", "faxdil"];
 
+// ADD APIKEY
+router.post("/apikey", async (req, res, next) => {
+  const key = req.query.key;
+  if(listkey.includes(key)) {
+    res.json({
+      message: 'apikey sudah terdaftar'
+    });
+  } else {
+    listkey.push(key);
+    res.json({
+      message: `berhasil mendaftarkan ${key} Kedatabase apikey`
+    });
+  }
+});
+
 router.get('/canvas/welcome', async (req, res) => {
             pp = req.query.pp,
             nama = req.query.nama,
