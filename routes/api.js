@@ -51,6 +51,9 @@ loghandler = {
         message: 'An internal error occurred. Please report via WhatsApp wa.me/62895619083555'
     }
 }
+
+const listkey = ["apit", "faxdil"];
+
 router.get('/canvas/welcome', async (req, res) => {
             pp = req.query.pp,
             nama = req.query.nama,
