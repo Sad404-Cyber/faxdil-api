@@ -507,6 +507,7 @@ res.json({
 	     let apikey = req.query.apikey
 	     if(!apikey) return res.json(loghandler.notparam)
 	     if (!url) return res.json(loghandler.noturl)
+	     if(listkey.includes(apikey)){
 	     let result = await mediafireDl(url)
 	     try {
 	     res.json({
@@ -519,6 +520,7 @@ res.json({
 		      res.json(loghandler.error)
 	       }
       })
+    }
      router.get('/youtube', async(req, res) => {
 	     let url = req.query.url
 	     if (!url) return res.json(loghandler.noturl)
