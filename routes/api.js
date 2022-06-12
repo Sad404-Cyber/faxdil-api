@@ -29,6 +29,14 @@ async function sleep(ms) {
 var key = 'faxdilkey' // Apikey Lu Ngab
 
 loghandler = {
+	notparam: {
+        status: false,
+        creator: `${creator}`,
+        code: 406,
+        result: {
+        message: 'masukan parameter apikey'
+        }
+    },
     noturl: {
         status: false,
         creator: `${creator}`,
@@ -484,6 +492,7 @@ res.json({
 	     let url = req.query.url,
 	     let apikey = req.query.apikey
 	     if(!apikey) return res.json(loghandler.notparam)
+	     if(apikey != 'freeapi') return res.json(loghandler.notapikey)
 	     if (!url) return res.json(loghandler.noturl)
 	     if(listkey.includes(apikey)){
 	     let result = await mediafireDl(url)
