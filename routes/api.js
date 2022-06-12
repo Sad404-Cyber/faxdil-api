@@ -26,6 +26,7 @@ async function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+var key = 'faxdilkey' // Apikey Lu Ngab
 
 loghandler = {
     noturl: {
@@ -52,7 +53,6 @@ loghandler = {
         message: 'An internal error occurred. Please report via WhatsApp wa.me/62895619083555'
     }
 }
-
 
 router.get('/canvas/welcome', async (req, res) => {
             pp = req.query.pp,
