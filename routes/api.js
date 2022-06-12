@@ -492,7 +492,7 @@ res.json({
 	     let url = req.query.url,
 	     let apikey = req.query.apikey
 	     if(!apikey) return res.json(loghandler.notparam)
-	     if(apikey != 'freeapi') return res.json(loghandler.notapikey)
+	     if(apikey != 'faxdilapikey') return res.json(loghandler.notapikey)
 	     if (!url) return res.json(loghandler.noturl)
 	     if(listkey.includes(apikey)){
 	     let result = await mediafireDl(url)
