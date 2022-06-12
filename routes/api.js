@@ -26,8 +26,6 @@ async function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-var key = 'faxdilkey' // Apikey Lu Ngab
-
 loghandler = {
 	notparam: {
         status: false,
