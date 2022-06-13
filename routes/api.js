@@ -439,7 +439,11 @@ router.get('/canvas/xnxx', async (req, res) => {
 		  res.json({
 			  status: 200,
 			  creator: `${creator}`,
-              result
+              result: {
+              	  nowatermark: result.data.nowm,
+                    watermark: result.data.wm,
+                    audiomp3: result.data.audio
+                  }
           })
 	   } catch(err) {
 		    console.log(err)
