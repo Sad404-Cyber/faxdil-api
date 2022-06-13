@@ -434,12 +434,23 @@ router.get('/canvas/xnxx', async (req, res) => {
     router.get('/tiktok', async(req, res) => {
 	      let url = req.query.url
 	      if (!url) return res.json(loghandler.noturl)
-	      let result = await xzons.ttdownloader(url)
-		  res.json({
-			  status: 200,
-			  creator: `${creator}`,
-              result: result.data
-          })
+		  fetch(encodeURI(`https://christian-id-api.herokuapp.com/api/download/tiktok?url=${url}&apikey=chris5128`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+              status: 200,
+             	creator: creator,
+                 result: {
+                 	nowatermark: result.data,
+                     watermark: result.wm,
+                     audiomp3: result.audio
+               }
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
     })
 router.get('/telesticker', async(req, res) => {
 	      let url = req.query.url
