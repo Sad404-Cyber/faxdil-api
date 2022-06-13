@@ -442,7 +442,7 @@ router.get('/canvas/xnxx', async (req, res) => {
               status: 200,
              	creator: creator,
                  result: {
-                 	nowatermark: result.data,
+                 	nowatermark: result.nowm,
                      watermark: result.wm,
                      audiomp3: result.audio
                }
