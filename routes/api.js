@@ -487,10 +487,7 @@ res.json({
 	       }
       })
      router.get('/mediafire', async(req, res) => {
-	     let url = req.query.url,
-	     let apikey = req.query.apikey
-	     if(!apikey) return res.json(loghandler.notparam)
-	     if(apikey != 'faxdilapikey') return res.json(loghandler.notapikey)
+	     let url = req.query.url
 	     if (!url) return res.json(loghandler.noturl)
 	     let result = await mediafireDl(url)
 	     try {
