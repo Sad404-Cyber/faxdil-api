@@ -435,17 +435,12 @@ router.get('/canvas/xnxx', async (req, res) => {
 	      let url = req.query.url
 	      if (!url) return res.json(loghandler.noturl)
 	      let result = await xzons.ttdownloader(url)
-	      try {
 		  res.json({
 			  status: 200,
 			  creator: `${creator}`,
-              result: {
-              	  nowatermark: result.data.nowm,
-                    watermark: result.data.wm,
-                    audiomp3: result.data.audio
-                  }
+              result: result.data
           })
-	   } catch(err) {
+	      catch(err) {
 		    console.log(err)
 		    res.json(loghandler.error)
 	     }
