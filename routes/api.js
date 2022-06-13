@@ -518,12 +518,12 @@ res.json({
               status: 200,
              	creator: creator,
                  result: {
-                 	judul: data.result.title,
-                     thumbnail: data.result.thumb,
-                     account_channel: data.result.channel,
-                     upload: data.result.published,
-                     views_total: data.result.views,
-                     link_mp3: data.result.url
+                 	judul: result.result.title,
+                     thumbnail: result.result.thumb,
+                     account_channel: result.result.channel,
+                     upload: result.result.published,
+                     views_total: result.result.views,
+                     link_mp3: result.result.url
                }
              })
          })
