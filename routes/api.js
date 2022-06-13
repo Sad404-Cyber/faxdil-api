@@ -514,17 +514,16 @@ res.json({
 	     fetch(encodeURI(`https://christian-id-api.herokuapp.com/api/download/ytmp3?url=${url}&apikey=chris5128`))
         .then(response => response.json())
         .then(data => {
-        var result = data;
              res.json({
               status: 200,
              	creator: creator,
                  result: {
-                 	judul: result.result.title,
-                     thumbnail: result.result.thumb,
-                     account_channel: result.result.channel,
-                     upload: result.result.published,
-                     views_total: result.result.views,
-                     link_mp3: result.result.url
+                 	judul: data.result.title,
+                     thumbnail: data.result.thumb,
+                     account_channel: data.result.channel,
+                     upload: data.result.published,
+                     views_total: data.result.views,
+                     link_mp3: data.result.url
                }
              })
          })
