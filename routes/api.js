@@ -442,9 +442,9 @@ router.get('/canvas/xnxx', async (req, res) => {
               status: 200,
              	creator: creator,
                  result: {
-                 	nowm: result.nowatermark,
-                     wm: result.watermark,
-                     audiomp3: result.audio
+                 	nowm: result.result.nowatermark,
+                     wm: result.result.watermark,
+                     audiomp3: result.result.audio
                }
              })
          })
@@ -519,12 +519,12 @@ res.json({
               status: 200,
              	creator: creator,
                  result: {
-                 	judul: result.title,
-                     thumbnail: result.thumb,
-                     account_channel: result.channel,
-                     upload: result.published,
-                     views_total: result.views,
-                     link_mp3: result.url
+                 	judul: result.result.title,
+                     thumbnail: result.result.thumb,
+                     account_channel: result.result.channel,
+                     upload: result.result.published,
+                     views_total: result.result.views,
+                     link_mp3: result.result.url
                }
              })
          })
