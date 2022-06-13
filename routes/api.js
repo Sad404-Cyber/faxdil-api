@@ -521,7 +521,7 @@ res.json({
                  result: {
                  	judul: result.title,
                      thumbnail: result.thumb,
-                     account channel: result.channel,
+                     account_channel: result.channel,
                      upload: result.published,
                      views_total: result.views,
                      link_mp3: result.url
