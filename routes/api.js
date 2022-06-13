@@ -440,10 +440,6 @@ router.get('/canvas/xnxx', async (req, res) => {
 			  creator: `${creator}`,
               result: result.data
           })
-	      catch(err) {
-		    console.log(err)
-		    res.json(loghandler.error)
-	     }
     })
 router.get('/telesticker', async(req, res) => {
 	      let url = req.query.url
