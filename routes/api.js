@@ -441,7 +441,7 @@ router.get('/canvas/xnxx', async (req, res) => {
              res.json({
               status: 200,
              	creator: creator,
-                 result
+                 result: result
              })
          })
          .catch(e => {
