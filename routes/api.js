@@ -508,20 +508,29 @@ res.json({
 		      res.json(loghandler.error)
 	       }
       })
-     router.get('/youtube', async(req, res) => {
+     router.get('/ytmp3', async(req, res) => {
 	     let url = req.query.url
 	     if (!url) return res.json(loghandler.noturl)
-	     let result = await hxz.youtube(url)
-	     try {
-	     res.json({
-			  status: 200,
-			  creator: `${creator}`,
-              result
-          })
-	    } catch(err) {
-		      console.log(err)
-		      res.json(loghandler.error)
-	       }
+	     fetch(encodeURI(`https://christian-id-api.herokuapp.com/api/download/ytmp3?url=${url}&apikey=chris5128`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+              status: 200,
+             	creator: creator,
+                 result: {
+                 	judul: result.title,
+                     thumbnail: result.thumb,
+                     account channel: result.channel,
+                     upload: result.published,
+                     views_total: result.views,
+                     link_mp3: result.url
+               }
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
      })
      router.get('/twitter', async(req, res) => {
 	     let url = req.query.url
