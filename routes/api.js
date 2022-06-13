@@ -437,14 +437,13 @@ router.get('/canvas/xnxx', async (req, res) => {
 		  fetch(encodeURI(`https://christian-id-api.herokuapp.com/api/download/tiktok?url=${url}&apikey=chris5128`))
         .then(response => response.json())
         .then(data => {
-        var result = data;
              res.json({
               status: 200,
              	creator: creator,
                  result: {
-                 	nowm: result.result.nowatermark,
-                     wm: result.result.watermark,
-                     audiomp3: result.result.audio
+                 	nowm: data.result.nowatermark,
+                     wm: data.result.watermark,
+                     audiomp3: data.result.audio
                }
              })
          })
