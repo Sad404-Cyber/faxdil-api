@@ -534,7 +534,7 @@ res.json({
      router.get('/ytmp4', async(req, res) => {
 	     let url = req.query.url
 	     if (!url) return res.json(loghandler.noturl)
-	     fetch(encodeURI(`https://christian-id-api.herokuapp.com/api/download/ytmp3?url=${url}&apikey=chris5128`))
+	     fetch(encodeURI(`https://christian-id-api.herokuapp.com/api/download/ytmp4?url=${url}&apikey=chris5128`))
         .then(response => response.json())
         .then(data => {
              res.json({
