@@ -531,6 +531,29 @@ res.json({
          	res.json(loghandler.error)
 })
      })
+     router.get('/ytmp4', async(req, res) => {
+	     let url = req.query.url
+	     if (!url) return res.json(loghandler.noturl)
+	     fetch(encodeURI(`https://christian-id-api.herokuapp.com/api/download/ytmp3?url=${url}&apikey=chris5128`))
+        .then(response => response.json())
+        .then(data => {
+             res.json({
+              status: 200,
+             	creator: creator,
+                 result: {
+                 	judul: result.result.title,
+                     thumbnail: result.result.thumb,
+                     account_channel: result.result.channel,
+                     upload: result.result.published,
+                     views_total: result.result.views,
+                     link_mp3: result.result.url
+               }
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+     })
      router.get('/twitter', async(req, res) => {
 	     let url = req.query.url
 	     if (!url) return res.json(loghandler.noturl)
