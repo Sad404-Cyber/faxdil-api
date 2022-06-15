@@ -61,6 +61,8 @@ loghandler = {
     }
 }
 
+var listkey = ["sayahafiz", "Kbbb25", "Kabajak34", "Kaoalljh291", "Jaoapql2719", "Kbbb5", "Kabaja34", "Kaoallh291", "Jaoaql2719", "Kskbbb25", "Kabajaksks34", "Kaoalljalalh291", "Jaoapspwpql2719", "Kbakalabb25", "Kabajskakak34", "Kaosksosalljh291", "Jaoapeowpwpql2719", "Kbskskakbb25", "Kabwpwpqpajak34", "Kanajaoalljh291", "Jaoapqal19", "Kbbalalab25", "Kabajsalak34", "Kaoa291", "ql2719"];
+
 router.get('/canvas/welcome', async (req, res) => {
             pp = req.query.pp,
             nama = req.query.nama,
