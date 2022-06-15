@@ -771,6 +771,33 @@ router.get('/asupan', async (req, res) => {
             await sleep(3000)
             await fs.unlinkSync(__path + '/database/waifu.png')
         })
+        
+        router.get('/randomimage/cosplay', async (req, res, next) => {
+	        let teks1 = req.query.teks1
+	        if (!teks1) return res.json(loghandler.notquery)
+            async function pShadow(text1) {
+  return new Promise((resolve, reject) => {
+    const options = { method: 'POST',
+      url: tema.shadow,
+      headers: { 'content-type': 'application/x-www-form-urlencoded' },
+      formData: { text_1: text1, login: 'OK' } };
+    
+    request(options, async function (error, response, body) {
+      if (error) throw new Error(error);
+      const $ = cheerio.load(body)
+      const result = {
+           url: $('div.btn-group > a').attr('href')
+      }
+      resolve(result);
+    });
+  })
+}
+	        let data = await getBuffer(result)
+            await fs.writeFileSync(__path +'/database/naruto.png', data)
+            await res.sendFile(__path +'/database/naruto.png')
+            await sleep(3000)
+            await fs.unlinkSync(__path + '/database/naruto.png')
+        })
      
  router.use(function (req, res) {
      res.status(404)
