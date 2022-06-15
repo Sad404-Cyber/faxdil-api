@@ -237,7 +237,7 @@ var gfx1 = await new ch.Gfx1()
 })
 
 router.get('/canvas/gfx2', async (req, res) => {
-        nama = req.query.teks
+        let nama = req.query.teks
     if (!nama) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter teks"})
    
 var image = await new ch.Gfx2()
