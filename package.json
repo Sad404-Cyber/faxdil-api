@@ -45,6 +45,7 @@
     "hxz-api": "^1.0.1",
     "request": "^2.88.2",
     "cheerio": "^1.0.0-rc.5",
+    "form-data": "^4.0.0",
     "xzons-api":"^0.2.1",
     "nhentai-js": "^4.0.0",
     "google-it": "^1.6.2",
