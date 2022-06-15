@@ -16,6 +16,7 @@ let cheerio = require("cheerio");
 let hxz = require('hxz-api')
 let xzons = require('xzons-api')
 let nhentai = require('nhentai-js');
+let formData = require('form-data');
 let NanaAPI = require('nana-api')
 let ch = require('canvas-hikki-2')
 let kc = require('knights-canvas')
