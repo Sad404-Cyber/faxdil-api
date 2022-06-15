@@ -635,7 +635,7 @@ router.get('/pinterestimage', async(req, res) => {
      })
      
       // Searching
-      router.get('/pinterest', async(req, res) => {
+      router.get('/pinterst', async(req, res) => {
 	      let query = req.query.query
 	      if (!query) return res.json(loghandler.notquery)
 	      let result = await pinterest(query)
