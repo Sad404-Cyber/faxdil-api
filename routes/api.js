@@ -772,7 +772,7 @@ router.get('/asupan', async (req, res) => {
             await fs.unlinkSync(__path + '/database/waifu.png')
         })
         
-        router.get('/randomimage/cosplay', async (req, res, next) => {
+        router.get('/naruto', async (req, res, next) => {
 	        let teks1 = req.query.teks1
 	        if (!teks1) return res.json(loghandler.notquery)
             async function pShadow(text1) {
