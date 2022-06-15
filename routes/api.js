@@ -557,17 +557,25 @@ res.json({
      router.get('/twitter', async(req, res) => {
 	     let url = req.query.url
 	     if (!url) return res.json(loghandler.noturl)
-	     let result = await hxz.twitter(url)
-	     try {
-	     res.json({
-			  status: 200,
-			  creator: `${creator}`,
-              result
-          })
-	    } catch(err) {
-		      console.log(err)
-		      res.json(loghandler.error)
-	       }
+	     fetch(encodeURI(`https://api.lolhuman.xyz/api/twitterimage?apikey=ThadzBotZ&url=${url}`))
+        .then(response => response.json())
+        .then(data => {
+             res.json({
+              status: 200,
+             	creator: creator,
+                 result: {
+                 	judul: result.result.title,
+                     thumbnail: result.result.thumb,
+                     account_channel: result.result.channel,
+                     upload: result.result.published,
+                     views_total: result.result.views,
+                     link_mp3: result.result.url
+               }
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
      })
 
       // Searching
