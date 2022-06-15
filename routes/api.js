@@ -12,6 +12,7 @@ let fs = require('fs')
 let fetch = require('node-fetch');
 let router  = express.Router();
 let request = require("request");
+const cheerio = require("cheerio");
 let hxz = require('hxz-api')
 let xzons = require('xzons-api')
 let nhentai = require('nhentai-js');
