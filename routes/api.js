@@ -11,6 +11,7 @@ let axios = require('axios')
 let fs = require('fs')
 let fetch = require('node-fetch');
 let router  = express.Router();
+let request = require("request");
 let hxz = require('hxz-api')
 let xzons = require('xzons-api')
 let nhentai = require('nhentai-js');
