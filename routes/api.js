@@ -554,7 +554,7 @@ res.json({
          	res.json(loghandler.error)
 })
      })
-     router.get('/twitter', async(req, res) => {
+     router.get('/twitterimage', async(req, res) => {
 	     let url = req.query.url
 	     if (!url) return res.json(loghandler.noturl)
 	     fetch(encodeURI(`https://api.lolhuman.xyz/api/twitterimage?apikey=ThadzBotZ&url=${url}`))
@@ -568,6 +568,26 @@ res.json({
                      account_username: result.result.user.username,
                      profile_image: result.result.user.photo,
                      link: result.result.link
+               }
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+     })
+
+router.get('/twitter', async(req, res) => {
+	     let url = req.query.url
+	     if (!url) return res.json(loghandler.noturl)
+	     fetch(encodeURI(`https://api.lolhuman.xyz/api/twitter?apikey=ThadzBotZ&url=${url}`))
+        .then(response => response.json())
+        .then(data => {
+             res.json({
+              status: 200,
+             	creator: creator,
+                 result: {
+                 	judul: result.result.title,
+                     url: result.result.link
                }
              })
          })
