@@ -533,7 +533,114 @@ res.json({
 })
      })
      
+     router.get('/ytmp4', async(req, res) => {
+	     let url = req.query.url
+	     if (!url) return res.json(loghandler.noturl)
+	     fetch(encodeURI(`https://christian-id-api.herokuapp.com/api/download/ytmp4?url=${url}&apikey=chris5128`))
+        .then(response => response.json())
+        .then(data => {
+        	var result = data;
+             res.json({
+              status: 200,
+             	creator: creator,
+                 result: {
+                 	judul: result.result.title,
+                     thumbnail: result.result.thumb,
+                     account_channel: result.result.channel,
+                     upload: result.result.published,
+                     views_total: result.result.views,
+                     link_mp4: result.result.url
+               }
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+     })
+     
+     router.get('/twitterimage', async(req, res) => {
+	     let url = req.query.url
+	     if (!url) return res.json(loghandler.noturl)
+	     fetch(encodeURI(`https://api.lolhuman.xyz/api/twitterimage?apikey=ThadzBotZ&url=${url}`))
+        .then(response => response.json())
+        .then(data => {
+        	var result = data;
+             res.json({
+              status: 200,
+             	creator: creator,
+                 result: {
+                 	account_name: result.result.user.name,
+                     account_username: result.result.user.username,
+                     profile_image: result.result.user.photo,
+                     link: result.result.link
+               }
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+     })
 
+router.get('/twitter', async(req, res) => {
+	     let url = req.query.url
+	     if (!url) return res.json(loghandler.noturl)
+	     fetch(encodeURI(`https://api.lolhuman.xyz/api/twitter?apikey=ThadzBotZ&url=${url}`))
+        .then(response => response.json())
+        .then(data => {
+        	var result = data;
+             res.json({
+              status: 200,
+             	creator: creator,
+                 result: {
+                 	judul: result.result.title,
+                     url: result.result.link
+               }
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+     })
+
+router.get('/pinterestimage', async(req, res) => {
+	     let url = req.query.url
+	     if (!url) return res.json(loghandler.noturl)
+	     fetch(encodeURI(`https://api.lolhuman.xyz/api/pinterestdl?apikey=ThadzBotZ&url=${url}`))
+        .then(response => response.json())
+        .then(data => {
+        	var result = data;
+             res.json({
+              status: 200,
+             	creator: creator,
+                 result: {
+                 	url: result.result
+               }
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+     })
+     
+  router.get('/pinterest', async(req, res) => {
+	     let url = req.query.url
+	     if (!url) return res.json(loghandler.noturl)
+	     fetch(encodeURI(`https://api.lolhuman.xyz/api/pinterestvideo?apikey=ThadzBotZ&url=${url}`))
+        .then(response => response.json())
+        .then(data => {
+        	var result = data;
+             res.json({
+              status: 200,
+             	creator: creator,
+                 result: {
+                 	url: result.result
+               }
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+     })
      
       // Searching
       router.get('/pinterst', async(req, res) => {
