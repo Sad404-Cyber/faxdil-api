@@ -348,7 +348,7 @@ var cgfx = await new ch.customGfx2()
 })
 })
 router.get('/canvas/gura', async (req, res) => {
-            teks = req.query.teks
+            let teks = req.query.teks
     if (!teks) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter teks"})
 var gura = await new ch.Gura()
     .setName(teks) 
