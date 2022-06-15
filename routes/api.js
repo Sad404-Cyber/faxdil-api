@@ -793,12 +793,15 @@ router.get('/asupan', async (req, res) => {
     });
   })
 }
-	        let data = await getBuffer(result)
-            await fs.writeFileSync(__path +'/database/naruto.png', data)
+            pNaruto(text1)
+            .then((data) => {
+	        let result = data;
+            await fs.writeFileSync(__path +'/database/naruto.png', result)
             await res.sendFile(__path +'/database/naruto.png')
             await sleep(3000)
             await fs.unlinkSync(__path + '/database/naruto.png')
         })
+     })
      
  router.use(function (req, res) {
      res.status(404)
