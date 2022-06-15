@@ -795,7 +795,7 @@ router.get('/asupan', async (req, res) => {
 }
             pNaruto(text1)
             .then((data) => {
-	        let result = data;
+	        var result = data;
             await fs.writeFileSync(__path +'/database/naruto.png', result)
             await res.sendFile(__path +'/database/naruto.png')
             await sleep(3000)
