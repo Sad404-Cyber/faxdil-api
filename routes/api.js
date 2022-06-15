@@ -596,6 +596,24 @@ router.get('/twitter', async(req, res) => {
 })
      })
 
+router.get('/pinterestimage', async(req, res) => {
+	     let url = req.query.url
+	     if (!url) return res.json(loghandler.noturl)
+	     fetch(encodeURI(`https://api.lolhuman.xyz/api/pinterestdl?apikey=ThadzBotZ&url=${url}`))
+        .then(response => response.json())
+        .then(data => {
+             res.json({
+              status: 200,
+             	creator: creator,
+                 result: {
+                 	url: result.result.736x
+               }
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+     })
       // Searching
       router.get('/pinterest', async(req, res) => {
 	      let query = req.query.query
