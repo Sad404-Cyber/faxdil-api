@@ -547,7 +547,7 @@ res.json({
                      account_channel: result.result.channel,
                      upload: result.result.published,
                      views_total: result.result.views,
-                     link_mp3: result.result.url
+                     link_mp4: result.result.url
                }
              })
          })
