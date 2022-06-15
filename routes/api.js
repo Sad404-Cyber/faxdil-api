@@ -774,6 +774,7 @@ router.get('/asupan', async (req, res) => {
             await sleep(3000)
             await fs.unlinkSync(__path + '/database/waifu.png')
         })
+        //TEXTPRO
         router.get('/textpro/blackpink', async (req, res, next) => {
         	let query = req.query.query
 	      if (!query) return res.json(loghandler.notquery)
@@ -783,7 +784,87 @@ router.get('/asupan', async (req, res) => {
             await sleep(3000)
             await fs.unlinkSync(__path + '/database/waifu.png')
         })
-     
+        router.get('/textpro/neon', async (req, res, next) => {
+        	let query = req.query.query
+	      if (!query) return res.json(loghandler.notquery)
+	        let data = await getBuffer(`https://api.lolhuman.xyz/api/textprome/neon?apikey=ThadzBotZ&text=${query}`)
+            await fs.writeFileSync(__path +'/database/waifu.png', data)
+            await res.sendFile(__path +'/database/waifu.png')
+            await sleep(3000)
+            await fs.unlinkSync(__path + '/database/waifu.png')
+        })
+router.get('/textpro/greenneon', async (req, res, next) => {
+        	let query = req.query.query
+	      if (!query) return res.json(loghandler.notquery)
+	        let data = await getBuffer(`https://api.lolhuman.xyz/api/textprome/greenneon?apikey=ThadzBotZ&text=${query}`)
+            await fs.writeFileSync(__path +'/database/waifu.png', data)
+            await res.sendFile(__path +'/database/waifu.png')
+            await sleep(3000)
+            await fs.unlinkSync(__path + '/database/waifu.png')
+        })
+router.get('/textpro/advanceglow', async (req, res, next) => {
+        	let query = req.query.query
+	      if (!query) return res.json(loghandler.notquery)
+	        let data = await getBuffer(`https://api.lolhuman.xyz/api/textprome/advanceglow?apikey=ThadzBotZ&text=${query}`)
+            await fs.writeFileSync(__path +'/database/waifu.png', data)
+            await res.sendFile(__path +'/database/waifu.png')
+            await sleep(3000)
+            await fs.unlinkSync(__path + '/database/waifu.png')
+        })
+     router.get('/textpro/futureneon', async (req, res, next) => {
+        	let query = req.query.query
+	      if (!query) return res.json(loghandler.notquery)
+	        let data = await getBuffer(`https://api.lolhuman.xyz/api/textprome/futureneon?apikey=ThadzBotZ&text=${query}`)
+            await fs.writeFileSync(__path +'/database/waifu.png', data)
+            await res.sendFile(__path +'/database/waifu.png')
+            await sleep(3000)
+            await fs.unlinkSync(__path + '/database/waifu.png')
+        })
+router.get('/textpro/sandwriting', async (req, res, next) => {
+        	let query = req.query.query
+	      if (!query) return res.json(loghandler.notquery)
+	        let data = await getBuffer(`https://api.lolhuman.xyz/api/textprome/sandwriting?apikey=ThadzBotZ&text=${query}`)
+            await fs.writeFileSync(__path +'/database/waifu.png', data)
+            await res.sendFile(__path +'/database/waifu.png')
+            await sleep(3000)
+            await fs.unlinkSync(__path + '/database/waifu.png')
+        })
+router.get('/textpro/sandsummer', async (req, res, next) => {
+        	let query = req.query.query
+	      if (!query) return res.json(loghandler.notquery)
+	        let data = await getBuffer(`https://api.lolhuman.xyz/api/textprome/sandsummer?apikey=ThadzBotZ&text=${query}`)
+            await fs.writeFileSync(__path +'/database/waifu.png', data)
+            await res.sendFile(__path +'/database/waifu.png')
+            await sleep(3000)
+            await fs.unlinkSync(__path + '/database/waifu.png')
+        })
+        router.get('/textpro/sandengraved', async (req, res, next) => {
+        	let query = req.query.query
+	      if (!query) return res.json(loghandler.notquery)
+	        let data = await getBuffer(`https://api.lolhuman.xyz/api/textprome/sandengraved?apikey=ThadzBotZ&text=${query}`)
+            await fs.writeFileSync(__path +'/database/waifu.png', data)
+            await res.sendFile(__path +'/database/waifu.png')
+            await sleep(3000)
+            await fs.unlinkSync(__path + '/database/waifu.png')
+        })
+router.get('/textpro/metaldark', async (req, res, next) => {
+        	let query = req.query.query
+	      if (!query) return res.json(loghandler.notquery)
+	        let data = await getBuffer(`https://api.lolhuman.xyz/api/textprome/metaldark?apikey=ThadzBotZ&text=${query}`)
+            await fs.writeFileSync(__path +'/database/waifu.png', data)
+            await res.sendFile(__path +'/database/waifu.png')
+            await sleep(3000)
+            await fs.unlinkSync(__path + '/database/waifu.png')
+        })
+router.get('/textpro/neonlight', async (req, res, next) => {
+        	let query = req.query.query
+	      if (!query) return res.json(loghandler.notquery)
+	        let data = await getBuffer(`https://api.lolhuman.xyz/api/textprome/neonlight?apikey=ThadzBotZ&text=${query}`)
+            await fs.writeFileSync(__path +'/database/waifu.png', data)
+            await res.sendFile(__path +'/database/waifu.png')
+            await sleep(3000)
+            await fs.unlinkSync(__path + '/database/waifu.png')
+        })
  router.use(function (req, res) {
      res.status(404)
     .set("Content-Type", "text/html")
