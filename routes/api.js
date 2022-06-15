@@ -564,12 +564,10 @@ res.json({
               status: 200,
              	creator: creator,
                  result: {
-                 	judul: result.result.title,
-                     thumbnail: result.result.thumb,
-                     account_channel: result.result.channel,
-                     upload: result.result.published,
-                     views_total: result.result.views,
-                     link_mp3: result.result.url
+                 	account_name: result.result.user.name,
+                     account_username: result.result.user.username,
+                     profile_image: result.result.user.photo,
+                     link: result.result.link
                }
              })
          })
