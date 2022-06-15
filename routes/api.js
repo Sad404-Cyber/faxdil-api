@@ -537,7 +537,7 @@ res.json({
      
      router.get('/ytmp4', async(req, res) => {
 	     let url = req.query.url,
-	          apikey = req.query.apikey
+	     let apikey = req.query.apikey
 	     if (!url) return res.json(loghandler.noturl)
 	     if(!apikey) return res.json(loghandler.notapikey)
 	     if(listkey.includes(apikey)){ 
