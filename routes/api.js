@@ -774,7 +774,13 @@ router.get('/asupan', async (req, res) => {
             await sleep(3000)
             await fs.unlinkSync(__path + '/database/waifu.png')
         })
-        
+        router.get('/textpro/blackpink', async (req, res, next) => {
+	        let data = await getBuffer(`https://api.lolhuman.xyz/api/textprome/blackpink?apikey=ThadzBotZ&text=${query}`)
+            await fs.writeFileSync(__path +'/database/waifu.png', data)
+            await res.sendFile(__path +'/database/waifu.png')
+            await sleep(3000)
+            await fs.unlinkSync(__path + '/database/waifu.png')
+        })
      
  router.use(function (req, res) {
      res.status(404)
