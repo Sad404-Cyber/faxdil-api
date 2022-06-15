@@ -514,6 +514,7 @@ res.json({
 	     fetch(encodeURI(`https://christian-id-api.herokuapp.com/api/download/ytmp3?url=${url}&apikey=chris5128`))
         .then(response => response.json())
         .then(data => {
+        	var result = data;
              res.json({
               status: 200,
              	creator: creator,
