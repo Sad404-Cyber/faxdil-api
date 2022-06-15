@@ -606,7 +606,7 @@ router.get('/pinterestimage', async(req, res) => {
               status: 200,
              	creator: creator,
                  result: {
-                 	url: result.result.736x
+                 	url: result.result
                }
              })
          })
@@ -625,7 +625,7 @@ router.get('/pinterestimage', async(req, res) => {
               status: 200,
              	creator: creator,
                  result: {
-                 	url: result.result.720p
+                 	url: result.result
                }
              })
          })
