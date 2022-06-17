@@ -786,7 +786,7 @@ router.get('/asupan', async (req, res) => {
         })
         router.get('/textpro/neon', async (req, res, next) => {
         	let query = req.query.query
-	      if (!query) return res.json(loghandler.notquery)
+	        if (!query) return res.json(loghandler.notquery)
 	        let data = await getBuffer(`https://api.lolhuman.xyz/api/textprome/neon?apikey=ThadzBotZ&text=${query}`)
             await fs.writeFileSync(__path +'/database/waifu.png', data)
             await res.sendFile(__path +'/database/waifu.png')
