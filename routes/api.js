@@ -875,7 +875,7 @@ router.get('/textpro/neonlight', async (req, res, next) => {
             await sleep(3000)
             await fs.unlinkSync(__path + '/database/waifu.png')
         })
-        router.get('/textpro/cup', async (req, res, next) => {
+        router.get('/photooxy/cup', async (req, res, next) => {
         	let query = req.query.query
 	        if (!query) return res.json(loghandler.notquery)
 	        let data = await getBuffer(`https://api.lolhuman.xyz/api/textprome/cup?apikey=ThadzBotZ&text=${query}`)
@@ -884,7 +884,7 @@ router.get('/textpro/neonlight', async (req, res, next) => {
             await sleep(3000)
             await fs.unlinkSync(__path + '/database/waifu.png')
         })
-router.get('/textpro/cup1', async (req, res, next) => {
+router.get('/photooxy/cup1', async (req, res, next) => {
         	let query = req.query.query
 	      if (!query) return res.json(loghandler.notquery)
 	        let data = await getBuffer(`https://api.lolhuman.xyz/api/textprome/cup1?apikey=ThadzBotZ&text=${query}`)
@@ -893,7 +893,7 @@ router.get('/textpro/cup1', async (req, res, next) => {
             await sleep(3000)
             await fs.unlinkSync(__path + '/database/waifu.png')
         })
-router.get('/textpro/romance', async (req, res, next) => {
+router.get('/photooxy/romance', async (req, res, next) => {
         	let query = req.query.query
 	      if (!query) return res.json(loghandler.notquery)
 	        let data = await getBuffer(`https://api.lolhuman.xyz/api/textprome/romance?apikey=ThadzBotZ&text=${query}`)
@@ -902,7 +902,7 @@ router.get('/textpro/romance', async (req, res, next) => {
             await sleep(3000)
             await fs.unlinkSync(__path + '/database/waifu.png')
         })
-     router.get('/textpro/smoke', async (req, res, next) => {
+     router.get('/photooxy/smoke', async (req, res, next) => {
         	let query = req.query.query
 	      if (!query) return res.json(loghandler.notquery)
 	        let data = await getBuffer(`https://api.lolhuman.xyz/api/textprome/smoke?apikey=ThadzBotZ&text=${query}`)
@@ -911,7 +911,7 @@ router.get('/textpro/romance', async (req, res, next) => {
             await sleep(3000)
             await fs.unlinkSync(__path + '/database/waifu.png')
         })
-router.get('/textpro/burnpaper', async (req, res, next) => {
+router.get('/photooxy/burnpaper', async (req, res, next) => {
         	let query = req.query.query
 	      if (!query) return res.json(loghandler.notquery)
 	        let data = await getBuffer(`https://api.lolhuman.xyz/api/textprome/burnpaper?apikey=ThadzBotZ&text=${query}`)
@@ -920,7 +920,7 @@ router.get('/textpro/burnpaper', async (req, res, next) => {
             await sleep(3000)
             await fs.unlinkSync(__path + '/database/waifu.png')
         })
-router.get('/textpro/lovemessage', async (req, res, next) => {
+router.get('/photooxy/lovemessage', async (req, res, next) => {
         	let query = req.query.query
 	      if (!query) return res.json(loghandler.notquery)
 	        let data = await getBuffer(`https://api.lolhuman.xyz/api/textprome/lovemessage?apikey=ThadzBotZ&text=${query}`)
@@ -929,7 +929,7 @@ router.get('/textpro/lovemessage', async (req, res, next) => {
             await sleep(3000)
             await fs.unlinkSync(__path + '/database/waifu.png')
         })
-        router.get('/textpro/undergrass', async (req, res, next) => {
+        router.get('/photooxy/undergrass', async (req, res, next) => {
         	let query = req.query.query
 	      if (!query) return res.json(loghandler.notquery)
 	        let data = await getBuffer(`https://api.lolhuman.xyz/api/textprome/undergrass?apikey=ThadzBotZ&text=${query}`)
@@ -938,7 +938,7 @@ router.get('/textpro/lovemessage', async (req, res, next) => {
             await sleep(3000)
             await fs.unlinkSync(__path + '/database/waifu.png')
         })
-router.get('/textpro/love', async (req, res, next) => {
+router.get('/photooxy/love', async (req, res, next) => {
         	let query = req.query.query
 	      if (!query) return res.json(loghandler.notquery)
 	        let data = await getBuffer(`https://api.lolhuman.xyz/api/textprome/love?apikey=ThadzBotZ&text=${query}`)
@@ -947,7 +947,7 @@ router.get('/textpro/love', async (req, res, next) => {
             await sleep(3000)
             await fs.unlinkSync(__path + '/database/waifu.png')
         })
-router.get('/textpro/coffe', async (req, res, next) => {
+router.get('/photooxy/coffe', async (req, res, next) => {
         	let query = req.query.query
 	      if (!query) return res.json(loghandler.notquery)
 	        let data = await getBuffer(`https://api.lolhuman.xyz/api/textprome/coffe?apikey=ThadzBotZ&text=${query}`)
