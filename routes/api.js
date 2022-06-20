@@ -693,9 +693,9 @@ router.get('/asupan', async (req, res) => {
 
       // ANIME MANGA
 router.get('/animesearch', async(req, res) => {
-	     let text = req.query.text
-	     if (!text) return res.json(loghandler.nottext)
-	     fetch(encodeURI(`https://api.lolhuman.xyz/api/anime?apikey=sayajiro&query=${text}`))
+	     let query = req.query.query
+	     if (! query) return res.json(loghandler.notquery)
+	     fetch(encodeURI(`https://api.lolhuman.xyz/api/anime?apikey=sayajiro&query=${query}`))
         .then(response => response.json())
         .then(data => {
         	var result = data;
@@ -729,9 +729,9 @@ router.get('/animesearch', async(req, res) => {
      })
          
          router.get('/kusonimesearch', async(req, res) => {
-	     let text = req.query.text
-	     if (!text) return res.json(loghandler.nottext)
-	     fetch(encodeURI(`https://api.lolhuman.xyz/api/kusonimesearch?apikey=sayajiro&query=${text}`))
+	     let query = req.query.query
+	     if (!query) return res.json(loghandler.notquery)
+	     fetch(encodeURI(`https://api.lolhuman.xyz/api/kusonimesearch?apikey=sayajiro&query=${query}`))
         .then(response => response.json())
         .then(data => {
         	var result = data;
@@ -765,9 +765,9 @@ router.get('/animesearch', async(req, res) => {
      })
 
 router.get('/manga', async(req, res) => {
-	     let text = req.query.text
-	     if (!text) return res.json(loghandler.noturl)
-	     fetch(encodeURI(`https://api.lolhuman.xyz/api/manga?apikey=${apikey}&query=${text}`))
+	     let query = req.query.query
+	     if (!text) return res.json(loghandler.notquery)
+	     fetch(encodeURI(`https://api.lolhuman.xyz/api/manga?apikey=${apikey}&query=${query}`))
         .then(response => response.json())
         .then(data => {
         	var result = data;
