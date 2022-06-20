@@ -728,6 +728,23 @@ router.get('/animesearch', async(req, res) => {
 })
      })
          
+         router.get('/kusonimesearch', async(req, res) => {
+	     let text = req.query.text
+	     if (!text) return res.json(loghandler.noturl)
+	     fetch(encodeURI(`https://api.lolhuman.xyz/api/kusonimesearch?apikey=sayajiro&query=${text}`))
+        .then(response => response.json())
+        .then(data => {
+        	var result = data;
+             res.json({
+              status: 200,
+             	creator: creator,
+                 result: result.result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+     })
          
          // Random Image
           router.get('/randomimage/waifu', async (req, res, next) => {
