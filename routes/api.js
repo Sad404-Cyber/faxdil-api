@@ -746,6 +746,24 @@ router.get('/animesearch', async(req, res) => {
 })
      })
          
+         router.get('/otakudesu', async(req, res) => {
+	     let url = req.query.url
+	     if (!url) return res.json(loghandler.noturl)
+	     fetch(encodeURI(`https://api.lolhuman.xyz/api/kusonimesearch?apikey=sayajiro&query=${text}`))
+        .then(response => response.json())
+        .then(data => {
+        	var result = data;
+             res.json({
+              status: 200,
+             	creator: creator,
+                 result: result.result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+     })
+
          // Random Image
           router.get('/randomimage/waifu', async (req, res, next) => {
               fetch(encodeURI(`https://waifu.pics/api/sfw/waifu`))
