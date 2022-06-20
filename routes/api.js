@@ -693,9 +693,9 @@ router.get('/asupan', async (req, res) => {
 
       // ANIME MANGA
 router.get('/animesearch', async(req, res) => {
-	     let url = req.query.url
-	     if (!url) return res.json(loghandler.noturl)
-	     fetch(encodeURI(`https://api.lolhuman.xyz/api/anime?apikey=ThadzBotZ&query=gotoubun%20no%20hanayome`))
+	     let text = req.query.text
+	     if (!text) return res.json(loghandler.noturl)
+	     fetch(encodeURI(`https://api.lolhuman.xyz/api/anime?apikey=ThadzBotZ&query=${text}`))
         .then(response => response.json())
         .then(data => {
         	var result = data;
@@ -709,6 +709,7 @@ router.get('/animesearch', async(req, res) => {
          	res.json(loghandler.error)
 })
      })
+         
          
          // Random Image
           router.get('/randomimage/waifu', async (req, res, next) => {
