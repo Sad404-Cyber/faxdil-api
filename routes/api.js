@@ -940,7 +940,7 @@ router.get('/textpro/neonlight', async (req, res, next) => {
         router.get('/photooxy/shadow', async (req, res, next) => {
         	let query = req.query.query
 	      if (!query) return res.json(loghandler.notquery)
-	        let data = await getBuffer(`https://api.lolhuman.xyz/api/textprome/shadow?apikey=sayajiro&text=${query}`)
+	        let data = await getBuffer(`https://api.lolhuman.xyz/api/photooxy1/shadow?apikey=sayajiro&text=${query}`)
             await fs.writeFileSync(__path +'/database/waifu.png', data)
             await res.sendFile(__path +'/database/waifu.png')
             await sleep(3000)
@@ -949,7 +949,7 @@ router.get('/textpro/neonlight', async (req, res, next) => {
         router.get('/photooxy/cup', async (req, res, next) => {
         	let query = req.query.query
 	        if (!query) return res.json(loghandler.notquery)
-	        let data = await getBuffer(`https://api.lolhuman.xyz/api/textprome/cup?apikey=sayajiro&text=${query}`)
+	        let data = await getBuffer(`https://api.lolhuman.xyz/api/photooxy1/cup?apikey=sayajiro&text=${query}`)
             await fs.writeFileSync(__path +'/database/waifu.png', data)
             await res.sendFile(__path +'/database/waifu.png')
             await sleep(3000)
@@ -958,7 +958,7 @@ router.get('/textpro/neonlight', async (req, res, next) => {
 router.get('/photooxy/cup1', async (req, res, next) => {
         	let query = req.query.query
 	      if (!query) return res.json(loghandler.notquery)
-	        let data = await getBuffer(`https://api.lolhuman.xyz/api/textprome/cup1?apikey=sayajiro&text=${query}`)
+	        let data = await getBuffer(`https://api.lolhuman.xyz/api/photooxy1/cup1?apikey=sayajiro&text=${query}`)
             await fs.writeFileSync(__path +'/database/waifu.png', data)
             await res.sendFile(__path +'/database/waifu.png')
             await sleep(3000)
@@ -967,7 +967,7 @@ router.get('/photooxy/cup1', async (req, res, next) => {
 router.get('/photooxy/romance', async (req, res, next) => {
         	let query = req.query.query
 	      if (!query) return res.json(loghandler.notquery)
-	        let data = await getBuffer(`https://api.lolhuman.xyz/api/textprome/romance?apikey=sayajiro&text=${query}`)
+	        let data = await getBuffer(`https://api.lolhuman.xyz/api/photooxy1/romance?apikey=sayajiro&text=${query}`)
             await fs.writeFileSync(__path +'/database/waifu.png', data)
             await res.sendFile(__path +'/database/waifu.png')
             await sleep(3000)
@@ -976,7 +976,7 @@ router.get('/photooxy/romance', async (req, res, next) => {
      router.get('/photooxy/smoke', async (req, res, next) => {
         	let query = req.query.query
 	      if (!query) return res.json(loghandler.notquery)
-	        let data = await getBuffer(`https://api.lolhuman.xyz/api/textprome/smoke?apikey=sayajiro&text=${query}`)
+	        let data = await getBuffer(`https://api.lolhuman.xyz/api/photooxy1/smoke?apikey=sayajiro&text=${query}`)
             await fs.writeFileSync(__path +'/database/waifu.png', data)
             await res.sendFile(__path +'/database/waifu.png')
             await sleep(3000)
@@ -985,7 +985,7 @@ router.get('/photooxy/romance', async (req, res, next) => {
 router.get('/photooxy/burnpaper', async (req, res, next) => {
         	let query = req.query.query
 	      if (!query) return res.json(loghandler.notquery)
-	        let data = await getBuffer(`https://api.lolhuman.xyz/api/textprome/burnpaper?apikey=sayajiro&text=${query}`)
+	        let data = await getBuffer(`https://api.lolhuman.xyz/api/photooxy1/burnpaper?apikey=sayajiro&text=${query}`)
             await fs.writeFileSync(__path +'/database/waifu.png', data)
             await res.sendFile(__path +'/database/waifu.png')
             await sleep(3000)
@@ -994,7 +994,7 @@ router.get('/photooxy/burnpaper', async (req, res, next) => {
 router.get('/photooxy/lovemessage', async (req, res, next) => {
         	let query = req.query.query
 	      if (!query) return res.json(loghandler.notquery)
-	        let data = await getBuffer(`https://api.lolhuman.xyz/api/textprome/lovemessage?apikey=sayajiro&text=${query}`)
+	        let data = await getBuffer(`https://api.lolhuman.xyz/api/photooxy1/lovemessage?apikey=sayajiro&text=${query}`)
             await fs.writeFileSync(__path +'/database/waifu.png', data)
             await res.sendFile(__path +'/database/waifu.png')
             await sleep(3000)
@@ -1003,7 +1003,7 @@ router.get('/photooxy/lovemessage', async (req, res, next) => {
         router.get('/photooxy/undergrass', async (req, res, next) => {
         	let query = req.query.query
 	      if (!query) return res.json(loghandler.notquery)
-	        let data = await getBuffer(`https://api.lolhuman.xyz/api/textprome/undergrass?apikey=sayajiro&text=${query}`)
+	        let data = await getBuffer(`https://api.lolhuman.xyz/api/photooxy1/undergrass?apikey=sayajiro&text=${query}`)
             await fs.writeFileSync(__path +'/database/waifu.png', data)
             await res.sendFile(__path +'/database/waifu.png')
             await sleep(3000)
@@ -1012,7 +1012,7 @@ router.get('/photooxy/lovemessage', async (req, res, next) => {
 router.get('/photooxy/love', async (req, res, next) => {
         	let query = req.query.query
 	      if (!query) return res.json(loghandler.notquery)
-	        let data = await getBuffer(`https://api.lolhuman.xyz/api/textprome/love?apikey=sayajiro&text=${query}`)
+	        let data = await getBuffer(`https://api.lolhuman.xyz/api/photooxy1/love?apikey=sayajiro&text=${query}`)
             await fs.writeFileSync(__path +'/database/waifu.png', data)
             await res.sendFile(__path +'/database/waifu.png')
             await sleep(3000)
@@ -1021,7 +1021,7 @@ router.get('/photooxy/love', async (req, res, next) => {
 router.get('/photooxy/coffe', async (req, res, next) => {
         	let query = req.query.query
 	      if (!query) return res.json(loghandler.notquery)
-	        let data = await getBuffer(`https://api.lolhuman.xyz/api/textprome/coffe?apikey=sayajiro&text=${query}`)
+	        let data = await getBuffer(`https://api.lolhuman.xyz/api/photooxy1/coffe?apikey=sayajiro&text=${query}`)
             await fs.writeFileSync(__path +'/database/waifu.png', data)
             await res.sendFile(__path +'/database/waifu.png')
             await sleep(3000)
