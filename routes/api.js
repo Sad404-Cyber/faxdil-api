@@ -767,7 +767,7 @@ router.get('/animesearch', async(req, res) => {
 router.get('/manga', async(req, res) => {
 	     let query = req.query.query
 	     if (!text) return res.json(loghandler.notquery)
-	     fetch(encodeURI(`https://api.lolhuman.xyz/api/manga?apikey=${apikey}&query=${query}`))
+	     fetch(encodeURI(`https://api.lolhuman.xyz/api/manga?apikey=sayajiro&query=${query}`))
         .then(response => response.json())
         .then(data => {
         	var result = data;
