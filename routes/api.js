@@ -648,6 +648,24 @@ router.get('/pinterestimage', async(req, res) => {
      })
      
       // Searching
+router.get('/kbbi', async(req, res) => {
+	     let query = req.query.query
+	     if (!query) return res.json(loghandler.notquery)
+	     fetch(encodeURI(`https://new-kbbi-api.herokuapp.com/cari/${query}`))
+        .then(response => response.json())
+        .then(data => {
+        	var result = data;
+             res.json({
+              status: 200,
+             	creator: creator,
+                 result: {
+                 	url: result.result
+               }
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
       router.get('/pinterst', async(req, res) => {
 	      let query = req.query.query
 	      if (!query) return res.json(loghandler.notquery)
