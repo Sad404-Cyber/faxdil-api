@@ -663,6 +663,7 @@ router.get('/kbbi', async(req, res) => {
          })
          .catch(e => {
          	res.json(loghandler.error)
+         })
 })
       router.get('/pinterst', async(req, res) => {
 	      let query = req.query.query
